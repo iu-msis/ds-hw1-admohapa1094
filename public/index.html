@@ -5,78 +5,64 @@
   <title>Bootstrap Theme Simply Me</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Me</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
-      </ul>
-    </div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Me</a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">WHO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="AboutMe.html">WHAT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="MyInterests.html">INTERESTS</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Am I?</h3>
-  <img src="images/leo.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Messi" width="350" height="350">
+  <a href="https://www.gannett-cdn.com/-mm-/fcb8163fd8fbd229009030541ed9a0ba5ac08e6b/c=1629-239-2475-875/local/-/media/2018/06/24/USATODAY/USATODAY/636654404591000000-GTY-980548622.jpg?width=534&height=401&fit=crop">
+  <img src="images/leo.jpg" class="img-responsive rounded-circle margin" style="display:inline" alt="Leo Messi" width="300" height = "250">
+  </a>
   <h3>I'm Lionel Messi</h3>
   <h3>Country: Argentina</h3>
   <h3>Birthdate: 24 June 1987</h3>
   <h3>Age: 31</h3>
-  <h3>email: <a href ="leo.messi@gmail.com"</a>leo.messi@gmail.com</h3>
-</div>
-
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>I am an Argentine professional footballer who plays as a forward and captain for Spanish club Barcelona and the Argentine national team.</p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
-</div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center">
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-4">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
-    </div>
-  </div>
+  <h3>email: <a href ="mailto:leo.messi@gmail.com"</a>leo.messi@gmail.com</h3>
 </div>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p>
+  <p>Styled By Adyasha</p>
 </footer>
 
 </body>
