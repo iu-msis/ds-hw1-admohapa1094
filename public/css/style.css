@@ -36,4 +36,28 @@
   }
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
-  }
+}
+  .table-custom {
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+tr:hover {color:firebrick}
+
+.form-inline {
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+}
+
+.form-control {
+  margin-bottom: 5px;
+}
