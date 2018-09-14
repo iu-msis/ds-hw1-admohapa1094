@@ -48,16 +48,17 @@
 </nav>
 
 <!-- First Container -->
-<div class="container-fluid bg-1 text-center">
+<div id="profile" class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Am I?</h3>
   <a href="https://www.gannett-cdn.com/-mm-/fcb8163fd8fbd229009030541ed9a0ba5ac08e6b/c=1629-239-2475-875/local/-/media/2018/06/24/USATODAY/USATODAY/636654404591000000-GTY-980548622.jpg?width=534&height=401&fit=crop">
-  <img src="img/leo.jpg" class="img-responsive rounded-circle margin" style="display:inline" alt="Leo Messi" width="300" height = "250">
+  <img v-bind:src="user.picture" class="img-responsive rounded-circle margin" style="display:inline" alt="Leo Messi" width="300" height = "250">
   </a>
-  <h3>I'm Lionel Messi</h3>
+  <h3>I'm {{user.nameFirst}} {{user.nameLast}}</h3>
   <h3>Country: Argentina</h3>
-  <h3>Birthdate: 24 June 1987</h3>
-  <h3>Age: 31</h3>
-  <h3>email: <a href ="mailto:leo.messi@gmail.com">leo.messi@gmail.com</a></h3>
+  <h3>Birthdate: {{pretty_date(user.birthdate)}}</h3>
+  <h3>Age: {{calculate_age(user.birthdate)}}</h3>
+  <h3>email: <a v-bind:href ="'mailto:' + user.email">{{user.email}}</a></h3>
+<button v-on:click = "fetchProfile">Refresh</button>
 </div>
 
 <!-- Footer -->
@@ -65,5 +66,9 @@
   <p>Styled By Adyasha</p>
 </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/profile.app.js"></script>
 </body>
 </html>
