@@ -1,7 +1,8 @@
 <?php
 
 require '../../app/common.php';
-// Get the taskId
+
+// Get the taskId ?? is the coalesce operator set to a default value of 0
 $taskId = $_GET['taskId'] ?? 0;
 
 
