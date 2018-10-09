@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'
 && stripos ($_SERVER['CONTENT_TYPE'], 'application/json') !== false ) {
   $_POST = json_decode (file_getcontents('php://input'), true);
 }
-require 'environment.php'
+require 'environment.php';
 
 /** MODELS **/
 require 'models/Comment.php';
