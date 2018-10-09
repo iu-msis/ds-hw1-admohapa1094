@@ -2,7 +2,7 @@
 
 // Change the working directory to this file
 chdir(__DIR__);
-set_include-path (__DIR__);
+set_include_path (__DIR__);
 
 // Require class files
 if ($_SERVER['REQUEST_METHOD'] == 'POST'
