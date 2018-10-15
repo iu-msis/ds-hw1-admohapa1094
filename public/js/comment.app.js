@@ -4,8 +4,8 @@ var commentApp = new Vue ({
       comments:
       [
         {
-          id:'',
-          comment:''
+          comment_id:'',
+          comment_name:''
         }
       ]
     },
