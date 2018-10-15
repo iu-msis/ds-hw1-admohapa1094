@@ -17,10 +17,11 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<<!-- Navbar -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="#">Me</a>
@@ -56,76 +57,30 @@
   </a>
 </div>
 
+<div id="commentData">
 <table id="taskTable" class="table-custom">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">League</th>
-      <th scope="col">Goals</th>
-      <th scope="col">Team</th>
-      <th scope="col">Last Win</th>
+      <th scope="col">ID</th>
+      <th scope="col">Comment</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Under-20 World Cup Champion</td>
-      <td>1</td>
-      <td>Argentina</td>
-      <td>2nd July, 2005</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Olympic Medalist</td>
-      <td>1</td>
-      <td>Argentina Olympia</td>
-      <td>23rd August, 2008</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>UEFA Champions League</td>
-      <td>10</td>
-      <td>FC Barcelona</td>
-      <td>6th June, 2015</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>LaLiga</td>
-      <td>37</td>
-      <td>FC Barcelona</td>
-      <td>29th April, 2018</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Copa del Rey</td>
-      <td>47</td>
-      <td>FC Barcelona</td>
-      <td>21st April, 2018</td>
+  <tbody v-if="comments">
+    <tr v-for="comment in comments">
+      <th>{{comment.id}}</th>
+      <td>{{comment.comment}}</td>
     </tr>
   </tbody>
 </table>
-<br>
-<br>
+
 <form class="form-inline" action="/action_page.php">
   <div class="container">
 
+  <div class="form-group">
+    <label class="control-label col-sm-3" for="Comment">Comment:</label>
+    <input class="form-control col-sm-7" id="Comment">
+  </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-3" for="League">League:</label>
-    <input class="form-control col-sm-7" id="League">
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-3" for="Goals">Goals:</label>
-    <input class="form-control col-sm-7" id="Goals">
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-3" for="Team">Team:</label>
-    <input class="form-control col-sm-7" id="Team">
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-3" for="Last Win">Last Win:</label>
-    <input class="form-control col-sm-7" id="Last Win">
-  </div>
   <br>
   <div class="text-center">
     <button type="submit" class="btn btn-default">Submit</button>
@@ -133,6 +88,7 @@
   </div>
   </div>
 </form>
+</div>
 <br>
 
 <!-- Footer -->
@@ -141,6 +97,6 @@
 </footer>
 <script src="js/tablesort.min.js"></script>
 <script>new Tablesort(document.getElementById('taskTable'));</script>
-</body>
+<script src = "js/comment.app.js"></script>
 </body>
 </html>
