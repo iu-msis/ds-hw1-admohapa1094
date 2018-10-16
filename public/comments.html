@@ -59,14 +59,14 @@
 </div>
 
 <div id="commentData">
-<table id="taskTable" class="table-custom">
+<table id="commentTable" class="table-custom">
   <thead>
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Comment</th>
     </tr>
   </thead>
-  <tbody v-if="comments">
+  <tbody id="commentTableBody" v-if="comments">
     <tr v-for="comment in comments">
       <td>{{comment.comment_id}}</td>
       <td>{{comment.comment_name}}</td>
@@ -74,7 +74,7 @@
   </tbody>
 </table>
 
-<form class="form-inline" @submit.prevent="pushComment();">
+<form id="newCommentForm" class="form-inline" @submit.prevent="pushComment();">
   <div class="container">
   <div class="form-group">
     <label class="control-label col-sm-3" for="comment">Comment:</label>
@@ -83,7 +83,7 @@
 
   <br>
   <div class="text-center">
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button id="submitNewComment" type="submit" class="btn btn-default">Submit</button>
 
   </div>
   </div>
@@ -96,7 +96,7 @@
   <p>Styled By Adyasha</p>
 </footer>
 <script src="js/tablesort.min.js"></script>
-<script>new Tablesort(document.getElementById('taskTable'));</script>
+<script>new Tablesort(document.getElementById('commentTable'));</script>
 <script src = "js/comment.app.js"></script>
 </body>
 </html>
